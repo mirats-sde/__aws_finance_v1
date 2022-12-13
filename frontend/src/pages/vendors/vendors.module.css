@@ -1,0 +1,155 @@
+.invoice_table_container {
+  background-color: rgb(232, 232, 232);
+  min-height: 100vh;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  position: relative;
+}
+
+.left_invoice_table {
+  width: 100%;
+}
+
+.table_header {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  position: sticky;
+  top: 10.5%;
+  z-index: 10;
+}
+
+.left_table_header select {
+  padding: 0.6em 1em;
+  background-color: #1765dc;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 1em;
+}
+
+.left_table_header button {
+  background-color: rgb(14, 148, 14);
+  color: white;
+  border: none;
+  padding: 0.6em 1em;
+  margin-right: 1em;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.icon {
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  /* background: url("https://cdn2.iconfinder.com/data/icons/interface-part-3/32/tiny-loop-512.png")
+        no-repeat; */
+  border: 1px solid #ccc;
+  background-size: 20px;
+  padding: 0.6em 0 0.6em 2em;
+  border-radius: 3px;
+  font-weight: 500;
+  width: 250px;
+}
+
+.right_header select {
+  padding: 0.6em 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 1em;
+}
+
+.right_invoice_table {
+  width: 25%;
+}
+
+/* stats */
+.table_stats {
+  padding: 1.5em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  position: sticky;
+  top: 12.5%;
+}
+
+.table_stats section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.table_stats section:last-child {
+  border: none;
+}
+
+.table_stats section h4 {
+  font-weight: 400;
+  color: #333;
+}
+
+.table_stats section span {
+  font-weight: 500;
+}
+
+/* invoice_table */
+.invoice_table {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+}
+
+.invoice_table table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.invoice_table table thead {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  color: #333;
+  font-size: 18px;
+}
+
+.invoice_table table tbody tr td {
+  padding: 0.8em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.invoice_table table a {
+  color: black;
+}
+
+.light {
+  color: rgb(111, 111, 111);
+}
+.loaderContainer {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderContainer img {
+  width: 50px;
+  height: 50px;
+}

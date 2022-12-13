@@ -1,0 +1,255 @@
+/* comapny styles */
+.invoice_table_container {
+  background-color: rgb(232, 232, 232);
+  min-height: 100vh;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.left_invoice_table {
+  width: 95%;
+}
+
+.table_header {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  position: sticky;
+  top: 10.5%;
+  z-index: 10;
+}
+
+.left_table_header select {
+  padding: 0.6em 1em;
+  background-color: #1765dc;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 1em;
+}
+
+.left_table_header button {
+  background-color: rgb(14, 148, 14);
+  color: white;
+  border: none;
+  padding: 0.6em 1em;
+  margin-right: 1em;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.icon {
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  /* background: url("https://cdn2.iconfinder.com/data/icons/interface-part-3/32/tiny-loop-512.png")
+          no-repeat; */
+  border: 1px solid #ccc;
+  background-size: 20px;
+  padding: 0.6em 0 0.6em 2em;
+  border-radius: 3px;
+  font-weight: 500;
+  width: 250px;
+}
+.right_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.right_header select {
+  padding: 0.6em 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 1em;
+}
+
+.right_invoice_table {
+  width: 25%;
+  display: none;
+}
+
+/* stats */
+.table_stats {
+  padding: 1.5em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  position: sticky;
+  top: 12.5%;
+}
+
+.table_stats section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.table_stats section:last-child {
+  border: none;
+}
+
+.table_stats section h4 {
+  font-weight: 400;
+  color: #333;
+}
+
+.table_stats section span {
+  font-weight: 500;
+}
+
+/* invoice_table */
+.invoice_table {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+}
+
+.invoice_table table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.invoice_table table thead {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  color: #333;
+  font-size: 16px;
+  text-align: center !important;
+}
+
+.invoice_table table tbody tr td {
+  padding: 0.8em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.invoice_table table a {
+  color: black;
+}
+
+.light {
+  color: rgb(111, 111, 111);
+}
+.modalContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  line-height: 1.5;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.modalLeftContainer {
+  width: 50%;
+}
+.modalLeftContainer img {
+  width: 100%;
+  object-fit: cover;
+  height: 60vh;
+}
+.modalRightContainer {
+  padding: 10px;
+  width: 48%;
+}
+.modalRightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: start;
+}
+.innerRightDiv {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.innerRightDiv p {
+  font-size: 17px;
+}
+.innerRightDiv p:nth-child(1) {
+  /* color: red; */
+  font-size: 15px;
+}
+.downloadBillBTN {
+  align-self: flex-end;
+  padding: 7px 10px;
+  color: white;
+  background-color: rgb(14, 148, 14);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.BTNConatainer {
+  /* align-self: flex-end; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* .custom_file_input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom_file_input::before {
+  width: 60px;
+  content: "attached";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom_file_input:hover::before {
+  border-color: black;
+}
+.custom_file_input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+} */
+
+.file_attachment label {
+  padding: 10px;
+  display: table;
+  color: #fff;
+}
+
+.file_attachment input[type="file"] {
+  display: none;
+}
+.loaderContainer {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderContainer img {
+  width: 50px;
+  height: 50px;
+}

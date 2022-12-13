@@ -1,0 +1,226 @@
+.invoice_table_container {
+  background-color: rgb(232, 232, 232);
+  /* height: 100vh; */
+
+  min-height: 100vh;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.left_invoice_table {
+  width: 100%;
+}
+
+.table_header {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  position: sticky;
+  top: 9.5%;
+  z-index: 10;
+}
+
+.left_table_header select {
+  padding: 0.6em 1em;
+  background-color: #1765dc;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 1em;
+}
+
+.left_table_header button {
+  background-color: rgb(14, 148, 14);
+  color: white;
+  border: none;
+  padding: 0.6em 1em;
+  margin-right: 1em;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.left_table_header button:hover {
+  background-color: rgb(31, 183, 31);
+}
+.icon {
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  /* background: url("https://cdn2.iconfinder.com/data/icons/interface-part-3/32/tiny-loop-512.png")
+          no-repeat; */
+  border: 1px solid #ccc;
+  background-size: 20px;
+  padding: 0.6em 0 0.6em 2em;
+  border-radius: 3px;
+  font-weight: 500;
+  width: 250px;
+}
+.right_header {
+  display: flex;
+  align-items: center;
+}
+.right_header select {
+  padding: 0.6em 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 1em;
+}
+
+.right_invoice_table {
+  width: 20%;
+  position: sticky;
+  top: 50%;
+}
+
+/* stats */
+.table_stats {
+  padding: 1.5em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  position: sticky;
+  top: 12.5%;
+}
+
+.table_stats section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.table_stats section:last-child {
+  border: none;
+}
+
+.table_stats section h4 {
+  font-weight: 400;
+  color: #333;
+}
+
+.table_stats section span {
+  font-weight: 500;
+}
+
+/* invoice_table */
+.invoice_table {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+}
+
+.invoice_table table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.invoice_table table thead {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.invoice_table table thead th {
+  padding: 0.5em;
+  font-size: 15px;
+}
+.invoice_table table tbody tr:hover {
+  background-color: rgb(242, 242, 242);
+  cursor: pointer;
+}
+.invoice_table table tbody tr td {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+.light {
+  color: rgb(111, 111, 111);
+}
+
+.invoiceLink {
+  color: #0abb87;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.warning a,
+.warning p {
+  text-decoration: none;
+  color: #fd397a;
+  font-weight: 300;
+}
+
+.warning a {
+  border-bottom: 1px solid #ccc;
+}
+
+.create {
+  color: #595d6e;
+  font-weight: 300;
+}
+
+.invoiceNumber,
+.customerLink {
+  color: #343a40;
+  font-weight: 300;
+}
+
+.active {
+  font-size: 12px;
+  padding: 3px 7px;
+  font-weight: 700;
+  background-color: rgba(240, 157, 157, 0.802);
+  color: rgb(205, 14, 14);
+  text-transform: uppercase;
+}
+.canceled {
+  font-size: 12px;
+  padding: 3px 7px;
+  font-weight: 600;
+  background-color: rgb(211, 207, 207);
+  color: #343a40;
+  text-transform: uppercase;
+}
+.cancelledRow {
+  background-color: rgb(239, 237, 237);
+}
+.cancelledRow a,
+.cancelledRow span,
+.cancelledRow p {
+  color: grey;
+}
+/* dropdown */
+.menuItem a {
+  text-decoration: none;
+  color: black;
+}
+.loaderContainer {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderContainer img {
+  width: 50px;
+  height: 50px;
+}

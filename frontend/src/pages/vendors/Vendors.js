@@ -1,0 +1,290 @@
+import { Link, useNavigate } from "react-router-dom";
+import styles from "./vendors.module.css";
+import { styled } from "@mui/system";
+import TablePaginationUnstyled, {
+  tablePaginationUnstyledClasses as classes,
+} from "@mui/base/TablePaginationUnstyled";
+import { useState } from "react";
+import Header from "../../components/header/Header";
+import loader from "../../assets/loader.gif";
+import { useVendorContext } from "./vendorContext/VendorContext";
+const CustomTablePagination = styled(TablePaginationUnstyled)`
+  & .MuiTablePaginationUnstyled-toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0.5em 0em;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  & .MuiTablePaginationUnstyled-selectLabel {
+    margin: 0;
+  }
+
+  & .MuiTablePaginationUnstyled-select {
+    padding: 0.1em 1em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #484848;
+    outline: none;
+  }
+
+  & .MuiTablePaginationUnstyled-displayedRows {
+    margin: 0;
+
+    @media (min-width: 768px) {
+      margin-left: auto;
+    }
+  }
+
+  & .MuiTablePaginationUnstyled-spacer {
+    display: none;
+  }
+
+  & .MuiTablePaginationUnstyled-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5em;
+  }
+
+  & .MuiTablePaginationUnstyled-actions button {
+    padding: 0.1em 0.5em;
+    border: 1px solid #828282;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border: none;
+  }
+
+  & .MuiTablePaginationUnstyled-actions span {
+    // padding: 0 0.8em;
+    padding: 1em;
+    color: #484848;
+    font-weight: 700;
+  }
+`;
+const Vendors = () => {
+  const [allCustomerData, setAllCustomerData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const { allVendorData, setAllVendorData } = useVendorContext();
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(25);
+  console.log(allVendorData);
+  // Avoid a layout jump when reaching the last page with empty rows.
+  const emptyRows =
+    page > 0
+      ? Math.max(0, (1 + page) * rowsPerPage - allCustomerData?.length)
+      : 0;
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header />
+      {
+        <div className={styles.invoice_table_container}>
+          <div className={styles.left_invoice_table}>
+            <div className={styles.table_header}>
+              <div className={styles.left_table_header}>
+                <button onClick={() => navigate("/add-vendor")}>
+                  Add Vendor
+                </button>
+                <input
+                  type="search"
+                  className={styles.icon}
+                  placeholder="Search...."
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    e.target.value !== ""
+                      ? setRowsPerPage(-1)
+                      : setRowsPerPage(10);
+                  }}
+                />
+              </div>
+              <div className={styles.right_header}>
+                <select name="" id="">
+                  <option value="filter">Filter: All</option>
+                </select>
+              </div>
+            </div>
+
+            <div className={styles.invoice_table}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Contact Info</th>
+                    <th>Tax Information</th>
+                    <th>Others</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {allVendorData?.length ? (
+                    (rowsPerPage > 0
+                      ? allVendorData?.slice(
+                          page * rowsPerPage,
+                          page * rowsPerPage + rowsPerPage
+                        )
+                      : allVendorData
+                    )
+                      ?.filter((cData) =>
+                        !searchQuery
+                          ? cData
+                          : cData?.company_name
+                              ?.toLowerCase()
+                              ?.includes(searchQuery?.toLowerCase())
+                      )
+
+                      ?.map((elm, ind) => (
+                        <tr key={ind}>
+                          <td>
+                            {/* <Link to={`/customer-details/${elm?.customer_id}`}> */}
+                            {elm?.company_name}
+                            {/* </Link> */}
+                            <br />
+                            {/* <Link to={`/customer-details/${elm?.customer_id}`}> */}
+                            <p className={styles.light}>{elm?.vendor_name}</p>
+                            {/* </Link> */}
+                          </td>
+                          <td>
+                            <p>{elm?.mobile_number}</p>
+                            <p className={styles.light}>
+                              {elm?.account_email_id}
+                            </p>
+                          </td>
+                          <td>
+                            <p>{elm?.tax_information?.PAN_number}</p>
+                            <p className={styles.light}>{elm?.tax_id_number}</p>
+                          </td>
+                          <td>
+                            <p>{elm?.type_of_business}</p>
+                            <p className={styles.light}>
+                              {elm?.billing_address?.country}
+                            </p>
+                          </td>
+                        </tr>
+                      ))
+                  ) : (
+                    <div className={styles.loaderContainer}>
+                      <img src={loader} alt="" />
+                    </div>
+                  )}
+
+                  {/* {tableData.map((data) => {
+                return (
+                  <>
+                    <tr>
+                      <td>
+                        <a href={data.customerLink}>{data.customerLink}</a>{" "}
+                      </td>
+                      <td>
+                        <p>{data.mobile}</p>
+                        <p>{data.email}</p>
+                      </td>
+                      <td>
+                        <p>{data.pan}</p>
+                        <p>{data.gstin}</p>
+                      </td>
+                      <td>
+                        <p>{data.typeOfComp}</p>
+                        <p>{data.compLocation}</p>
+                      </td>
+                    </tr>
+                  </>
+                );
+              })} */}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <CustomTablePagination
+                      rowsPerPageOptions={[
+                        5,
+                        10,
+                        25,
+                        { label: "All", value: -1 },
+                      ]}
+                      colSpan={3}
+                      count={allVendorData?.length}
+                      rowsPerPage={rowsPerPage}
+                      page={page}
+                      componentsProps={{
+                        select: {
+                          "aria-label": "rows per page",
+                        },
+                        actions: {
+                          showFirstButton: true,
+                          showLastButton: true,
+                        },
+                      }}
+                      onPageChange={handleChangePage}
+                      onRowsPerPageChange={handleChangeRowsPerPage}
+                    />
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          {/* right */}
+
+          {/* <div className={styles.right_invoice_table}>
+            <div className={styles.table_stats}>
+              <section>
+                <h4>Total Vendors</h4>
+                <span>{allVendorData?.length}</span>
+              </section>
+              <section>
+                <h4>GST Registered</h4>
+                <span>
+                  {
+                    allCustomerData?.filter((data) => data?.tax_id_number)
+                      ?.length
+                  }
+                </span>
+              </section>
+              <section>
+                <h4>Unregistered</h4>
+                <span>
+                  {
+                    allCustomerData?.filter((data) => !data?.tax_id_number)
+                      ?.length
+                  }
+                </span>
+              </section>
+              <section>
+                <h4>Customers in last 30 days</h4>
+                <span>
+                  {
+                    allCustomerData?.filter((data) => !data?.tax_id_number)
+                      ?.length
+                  }
+                </span>
+              </section>
+            </div>
+          </div> */}
+        </div>
+      }
+    </>
+  );
+};
+
+export default Vendors;
