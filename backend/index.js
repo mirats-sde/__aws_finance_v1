@@ -36,32 +36,34 @@ const signature = require("./routers/invoices/invoiceSignatureRouter");
 // );
 app.use(cors());
 app.use(express.json());
-app.use(company);
-app.use(company_address);
-app.use(bankDetails);
-app.use(customers);
-app.use(billing_address);
-app.use(order);
-app.use(bank_transaction);
+app.use("/api", company);
+app.use("/api", company_address);
+app.use("/api", bankDetails);
+app.use("/api", customers);
+app.use("/api", billing_address);
+app.use("/api", order);
+app.use("/api", bank_transaction);
 // app.use(grand_total);
-app.use(tax_Information);
-app.use(customerBankDetails);
-app.use(customer_shippingAddress);
-app.use(invoiceOrder);
-app.use(invoice);
-app.use(vendor);
-app.use(vendor_bank_details);
-app.use(vendor_billing_address);
-app.use(vendor_shipping_address);
-app.use(vendor_tax_details);
-app.use(vendor_invoice);
-app.use(contact);
-app.use(client_report);
-app.use(signature);
-
+app.use("/api", tax_Information);
+app.use("/api", customerBankDetails);
+app.use("/api", customer_shippingAddress);
+app.use("/api", invoiceOrder);
+app.use("/api", invoice);
+app.use("/api", vendor);
+app.use("/api", vendor_bank_details);
+app.use("/api", vendor_billing_address);
+app.use("/api", vendor_shipping_address);
+app.use("/api", vendor_tax_details);
+app.use("/api", vendor_invoice);
+app.use("/api", contact);
+app.use("/api", client_report);
+app.use("/api", signature);
+app.use("/api", (req, res) => {
+  res.send("hello I'm live");
+});
 // { alter: true }
-db.sequelize.sync({ alter: true }).then((req) => {
-  app.listen(process.env.PORT || 3000, () => {
-    console.log(`server is running on http://localhost:${port}`);
+db.sequelize.sync().then((req) => {
+  app.listen(process.env.PORT || 3001, () => {
+    console.log(`server is runninG on http://localhost:${port}`);
   });
 });
