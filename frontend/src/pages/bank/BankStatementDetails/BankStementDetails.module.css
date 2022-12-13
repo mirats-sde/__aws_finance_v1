@@ -1,0 +1,120 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 39px;
+  width: 100%;
+  height: 89vh;
+}
+.modalLeftContainer {
+  width: 45%;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 20px;
+  /* flex-wrap: wrap; */
+}
+.modalLeftContainer iframe {
+  width: 100%;
+  object-fit: cover;
+  height: 70vh;
+}
+.modalRightContainer {
+  padding: 10px;
+  width: 48%;
+}
+.modalRightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: start;
+}
+.innerRightDiv {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.innerRightDiv p {
+  font-size: 17px;
+}
+.innerRightDiv p:nth-child(1) {
+  /* color: red; */
+  font-size: 15px;
+}
+.downloadBillBTN {
+  align-self: flex-end;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgb(14, 148, 14);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.BTNConatainer {
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+}
+.BTNConatainer input[type="file"] {
+  display: none;
+}
+
+.BTNConatainer label {
+  padding: 10px;
+  display: table;
+  color: #fff;
+}
+/* .modalContainer {
+  display: flex;
+  width: 100%;
+  line-height: 1.5;
+}
+.modalLeftContainer {
+  width: 50%;
+} */
+.cards {
+  background-color: lightgrey;
+  cursor: pointer;
+  /* height: 50px;
+  
+  width: 40px; */
+}
+.cards:hover > section {
+  transform: scaleY(1.2);
+}
+.cards p {
+  padding: 15px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* border: 1px solid green; */
+  border-radius: 14px 14px 0 0;
+  background-color: rgb(119, 115, 115);
+  color: white;
+}
+.cards section {
+  background-color: lightgrey;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 800;
+  color: rgb(65, 62, 62);
+  font-size: 25px;
+  transition: 0.2s ease-in;
+}
+.cards section span {
+  position: absolute;
+  right: -13px;
+  top: -13px;
+  color: grey;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.cards section span:hover {
+  color: black;
+}

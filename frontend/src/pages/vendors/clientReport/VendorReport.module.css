@@ -1,0 +1,45 @@
+.invoice_table table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 10px;
+}
+
+.invoice_table table td,
+.invoice_table table th {
+  border: 1px solid black;
+  padding: 0.2em;
+}
+.invoice_table table thead {
+  position: sticky;
+  top: 8%;
+  z-index: 10;
+  background-color: #fff;
+}
+.invoice_table table tbody tr:hover {
+  background-color: rgb(242, 242, 242);
+}
+.filtersContainer {
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.modalInnerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inputContainer {
+  display: flex;
+  gap: 15px;
+}

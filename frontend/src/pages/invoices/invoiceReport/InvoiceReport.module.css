@@ -1,0 +1,13 @@
+.invoice_table table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 14px;
+}
+
+.invoice_table table td,
+.invoice_table table th {
+  border: 1px solid black;
+  padding: 0.5em;
+}

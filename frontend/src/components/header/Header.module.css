@@ -1,0 +1,125 @@
+.header {
+  background: #fafafa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.11);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  /* height: 65px; */
+}
+.active {
+  border-bottom: 3px solid #777575;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-weight: 700 !important;
+  text-underline-offset: 7px !important;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 0 2em;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_left img {
+  margin-right: 1em;
+  width: 60px;
+  object-fit: cover;
+}
+
+.header_left a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #525252;
+}
+
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sign_in {
+  display: flex;
+  align-items: center;
+}
+
+.sign_in p {
+  color: #979797;
+}
+
+.portalprofile img {
+  width: 40px;
+  height: 50px;
+  object-fit: cover;
+  filter: drop-shadow(0px 11px 14px rgba(0, 0, 0, 0.25));
+}
+
+.avatar_profile {
+  margin-left: 0.5em;
+}
+.navTitles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .navCenterBody {
+  position: relative;
+} */
+.dropdownContainer {
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  left: 50%; */
+}
+.dropdownContainer:hover .dropdownLists {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 30px;
+  gap: 19px;
+}
+.dropdownLists {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  background: #fafafa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.11);
+  z-index: 111;
+  display: none;
+}
+.myNav {
+  text-decoration: none;
+  color: black;
+  margin: 0 1em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #525252;
+  cursor: pointer;
+}
+.dropdownLists li {
+  list-style-type: none;
+
+  cursor: pointer;
+}
+.dropdownLists li a {
+  font-size: 15px;
+}

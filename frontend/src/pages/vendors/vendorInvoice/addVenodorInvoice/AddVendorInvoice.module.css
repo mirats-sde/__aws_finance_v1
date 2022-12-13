@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.invoice_container {
+  font-family: "Outfit", sans-serif;
+  background-color: #f5f6f6;
+  /* height: 100vh; */
+  padding: 5px 2em;
+}
+
+.intro_text {
+  font-weight: 500;
+  padding: 1em 0.8em 0 0.8em;
+}
+
+.invoice_details {
+  /* background-color: #fff; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0 2px 8px 0 rgb(99 99 99 / 20%); */
+  padding: 1.5em;
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+}
+
+.invoice_details_left {
+  width: 50%;
+}
+
+.invoice_details_right {
+  width: 50%;
+}
+
+.input_group {
+  margin-bottom: 1.2em;
+}
+
+.input_group label {
+  display: block;
+  margin-bottom: 0.8em;
+  font-size: 18px;
+  color: #222;
+}
+
+.input_group input,
+.input_group select,
+.input_group textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  /* border: 1px solid #333; */
+  outline: none;
+  /* transition: 0.1s ease; */
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.input_group input:focus,
+.input_group input:active {
+  border: 2px solid black;
+}
+
+.input_group input[type="file"] {
+  padding-top: 1em;
+}
+
+.input_group select:focus,
+.input_group textarea:focus {
+  border: 2px solid black;
+}
+
+.input_group select {
+  border-right: 16px solid transparent;
+}
+.inVoiceForm {
+  background-color: #f5f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inVoiceForm button {
+  align-self: center;
+  padding: 8px 10px;
+  width: 100px;
+  cursor: pointer;
+}

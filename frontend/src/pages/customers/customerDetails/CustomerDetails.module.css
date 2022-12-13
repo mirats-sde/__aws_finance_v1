@@ -1,0 +1,331 @@
+.mainCustomerDetailsContainer {
+  width: 100%;
+  background-color: rgb(242, 243, 248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customerContentContainer {
+  margin: 25px 0;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+  /* border: 1px solid black; */
+}
+.deleteBTN {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+}
+.customerLeftContainer {
+  width: 45%;
+  background-color: #ffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  /* border: 1px solid red; */
+  /* background-color: white; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.customerRightContainer {
+  width: 55%;
+  background-color: #ffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* border: 1px solid green; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.customerLeftContent {
+  width: 95%;
+  /* padding: 0.4em 0.6em; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(194, 190, 190);
+}
+.leftRow {
+  /* display: flex; */
+  width: 100%;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.leftRow:nth-child(1) {
+  border-top: none;
+}
+.border {
+  display: flex;
+  border-top: 1px solid rgb(194, 190, 190);
+  padding: 0em 0.6em;
+  /* justify-content: space-between; */
+}
+
+.border h3 {
+  padding: 0.3em 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+.border h3:nth-child(even) {
+  color: rgb(50, 72, 198);
+  font-weight: 300;
+}
+.leftRow h3:nth-child(1) {
+  width: 30%;
+  border-right: 1px solid rgb(194, 190, 190);
+}
+
+.leftRow h3:nth-child(2) {
+  padding-left: 1em;
+}
+.customerLeftContent table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+.customerLeftContent table,
+.customerLeftContent th,
+.customerLeftContent td {
+  border: 1px solid black;
+  padding: 0.8em;
+}
+.customerLeftContent thead {
+  background-color: rgb(247, 247, 247);
+}
+
+.customerLeftContent thead th {
+  font-weight: 500;
+}
+
+.invoiceLink {
+  color: #135bc7;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.center_bold {
+  font-weight: 500;
+  text-align: center;
+}
+
+.customerLeftContent table tr td:last-child,
+.customerLeftContent table tr th:last-child {
+  text-align: right;
+}
+
+.customerLeftContent table tr td:nth-child(3),
+.customerLeftContent table tr th:nth-child(3) {
+  text-align: right;
+}
+.leftRow h3:nth-child(2) {
+  cursor: pointer;
+}
+/* --------------------------------Modal styles------------------ */
+.add_customer_container {
+  padding: 1em 2em 4em 2em;
+  background-color: rgb(245, 246, 246);
+}
+
+.customer_onboarding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  height: 80px;
+  padding: 0 1.4em;
+  margin-bottom: 1em;
+  background-color: #fff;
+}
+
+.onboarding_text {
+  font-size: 1.3em;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  /* width: 50%; */
+  /* margin: 2em 0 3em 0; */
+  /* width: 100%; */
+}
+
+.tablight {
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: none;
+  border: 1px solid #1765dc;
+  padding: 0.5em 1em;
+}
+
+.tabactive {
+  color: white;
+  font-weight: 500;
+  background-color: #1765dc;
+}
+
+.actionBtns button {
+  border: none;
+  background-color: #1765dc;
+  color: white;
+  padding: 0.7em 1.5em;
+  font-weight: 500;
+}
+
+.actionBtns span {
+  margin-right: 0.2em;
+}
+
+/* customer_information */
+.customer_information_container,
+.banking_taxes {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  padding: 1em 0;
+  background-color: #fff;
+}
+
+.customer_information,
+.customer_information_address {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.left_inputs {
+  width: 50%;
+}
+
+.select_with_input {
+  width: 100%;
+}
+
+.input_group {
+  margin-bottom: 2em;
+}
+
+.input_group input,
+.input_group select {
+  border: 1px solid lightgray;
+  padding: 0.9em 0.8em;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input_group input::placeholder {
+  color: rgb(131, 131, 131);
+}
+
+.input_group input:focus,
+.input_group select:focus {
+  border: 1px solid #1765dc;
+}
+
+.input_group input {
+  width: 100%;
+}
+
+.select_with_input input,
+.select_with_input select {
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+.select_with_input select {
+  padding: 0.9em 0.8em;
+  margin-bottom: 2.5em;
+  width: 20%;
+}
+
+.select_with_input input {
+  padding: 0.9em 0.8em;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+.input_group .gst {
+  display: flex;
+  align-items: center;
+}
+
+.gst a {
+  font-size: 15px;
+}
+
+.right_inputs {
+  width: 50%;
+}
+
+.right_inputs select {
+  width: 100%;
+}
+
+.biling_address_container {
+  margin-top: 2em;
+}
+
+.biling_address_container .input_group select {
+  width: 100%;
+}
+
+.banking_taxes .input_group select {
+  width: 100%;
+}
+
+.check {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.tax_text {
+  padding-left: 0.8em;
+  font-weight: 500;
+}
+
+.customer_information_address {
+}
+.BTNConatainer {
+  /* align-self: flex-end; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.downloadBillBTN {
+  align-self: flex-end;
+  padding: 7px 10px;
+  color: white;
+  background-color: rgb(14, 148, 14);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.customerLink {
+  width: 70% !important;
+  font-size: 15px !important;
+  word-break: break-all;
+}

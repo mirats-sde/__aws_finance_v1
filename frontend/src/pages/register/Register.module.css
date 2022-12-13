@@ -1,0 +1,44 @@
+.mainRegisaterConatainer {
+  width: 100%;
+  height: 100vh;
+  background: rgb(233, 229, 229);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerRegisterContainer {
+  width: 40%;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  /* gap: 35px; */
+  border-radius: 29px;
+  /* background: #e0e0e0; */
+  box-shadow: 5px 5px 10px #a1a1a1;
+}
+.innerRegisterContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 35px;
+}
+.registerRow {
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+.registerRow select {
+  width: 50%;
+  height: 44px;
+  border-radius: 15px;
+  border: 2px solid #dfe3e6;
+  padding: 0 10px;
+}
+.registerRow select:focus {
+  outline: 2px solid black;
+}

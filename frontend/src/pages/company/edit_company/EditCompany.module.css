@@ -1,0 +1,167 @@
+.add_customer_container {
+  padding: 1em 2em 4em 2em;
+  background-color: rgb(245, 246, 246);
+}
+
+.customer_onboarding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  height: 80px;
+  padding: 0 1.4em;
+  margin-bottom: 1em;
+  background-color: #fff;
+}
+
+.onboarding_text {
+  font-size: 1.3em;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  /* width: 50%; */
+  /* margin: 2em 0 3em 0; */
+  /* width: 100%; */
+}
+
+.tablight {
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: none;
+  border: 1px solid #1765dc;
+  padding: 0.5em 1em;
+}
+
+.tabactive {
+  color: white;
+  font-weight: 500;
+  background-color: #1765dc;
+}
+
+.actionBtns button {
+  border: none;
+  background-color: #1765dc;
+  color: white;
+  padding: 0.7em 1.5em;
+  font-weight: 500;
+}
+
+.actionBtns span {
+  margin-right: 0.2em;
+}
+
+/* customer_information */
+.customer_information_container,
+.banking_taxes {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  padding: 1em 0;
+  background-color: #fff;
+}
+
+.customer_information,
+.customer_information_address {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.left_inputs {
+  width: 50%;
+}
+
+.select_with_input {
+  width: 100%;
+}
+
+.input_group {
+  margin-bottom: 2em;
+}
+
+.input_group input,
+.input_group select {
+  border: 1px solid lightgray;
+  padding: 0.9em 0.8em;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input_group input::placeholder {
+  color: rgb(131, 131, 131);
+}
+
+.input_group input:focus,
+.input_group select:focus {
+  border: 1px solid #1765dc;
+}
+
+.input_group input {
+  width: 100%;
+}
+
+.select_with_input input,
+.select_with_input select {
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+.select_with_input select {
+  padding: 0.9em 0.8em;
+  margin-bottom: 2.5em;
+  width: 20%;
+}
+
+.select_with_input input {
+  padding: 0.9em 0.8em;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+.input_group .gst {
+  display: flex;
+  align-items: center;
+}
+
+.gst a {
+  font-size: 15px;
+}
+
+.right_inputs {
+  width: 50%;
+}
+
+.right_inputs select {
+  width: 100%;
+}
+
+.biling_address_container {
+  margin-top: 2em;
+}
+
+.biling_address_container .input_group select {
+  width: 100%;
+}
+
+.banking_taxes .input_group select {
+  width: 100%;
+}
+
+.check {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.tax_text {
+  padding-left: 0.8em;
+  font-weight: 500;
+}
+
+.customer_information_address {
+}
