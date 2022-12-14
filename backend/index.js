@@ -3,7 +3,7 @@ const app = express();
 const db = require("./models");
 require("dotenv").config();
 const cors = require("cors");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const company = require("./routers/company/companyRouter");
 const company_address = require("./routers/company/addressRouter");
