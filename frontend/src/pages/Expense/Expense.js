@@ -59,73 +59,100 @@ const Expense = () => {
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-  const CustomTablePagination = styled(TablePaginationUnstyled)`
-    & .MuiTablePaginationUnstyled-toolbar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 0.5em 0em;
+  const blue = {
+    200: "#A5D8FF",
+    400: "#3399FF",
+  };
 
+  const grey = {
+    50: "#f6f8fa",
+    100: "#eaeef2",
+    200: "#d0d7de",
+    300: "#afb8c1",
+    400: "#8c959f",
+    500: "#6e7781",
+    600: "#57606a",
+    700: "#424a53",
+    800: "#32383f",
+    900: "#24292f",
+  };
+
+  const CustomTablePagination = styled(TablePaginationUnstyled)(
+    ({ theme }) => `
+    & .${classes.spacer} {
+      display: none;
+    }
+  
+    & .${classes.toolbar}  {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 12px;
+          padding: 0.5em 0em;
+  
       @media (min-width: 768px) {
         flex-direction: row;
         align-items: center;
       }
     }
-
-    & .MuiTablePaginationUnstyled-selectLabel {
+  
+    & .${classes.selectLabel} {
       margin: 0;
     }
-
-    & .MuiTablePaginationUnstyled-select {
+  
+    & .${classes.select}{
       padding: 0.1em 1em;
-      border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-      border: none;
-      font-weight: 700;
-      font-size: 14px;
-      color: #484848;
-      outline: none;
+          border-radius: 5px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          border: none;
+          font-weight: 700;
+          font-size: 14px;
+          color: #484848;
+          outline: none;
     }
-
-    & .MuiTablePaginationUnstyled-displayedRows {
+  
+      &:hover {
+        background-color: ${
+          theme.palette.mode === "dark" ? grey[800] : grey[50]
+        };
+      }
+  
+      &:focus {
+        outline: 1px solid ${
+          theme.palette.mode === "dark" ? blue[400] : blue[200]
+        };
+      }
+    }
+  
+    & .${classes.displayedRows} {
       margin: 0;
-
+  
       @media (min-width: 768px) {
         margin-left: auto;
       }
     }
-
-    & .MuiTablePaginationUnstyled-spacer {
-      display: none;
-    }
-
-    & .MuiTablePaginationUnstyled-actions {
+  
+    & .${classes.actions} {
       display: flex;
       gap: 0.5rem;
       padding: 0.5em;
+      border: none;
     }
-
-    & .MuiTablePaginationUnstyled-actions button {
-      padding: 0.1em 0.5em;
+  
+    & .${classes.actions} > button {
+      padding: 0.1em 1em;
       border: 1px solid #828282;
       cursor: pointer;
       background-color: white;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
       border: none;
     }
-
-    & .MuiTablePaginationUnstyled-actions span {
-      // padding: 0 0.8em;
-      padding: 1em;
-      color: #484848;
-      font-weight: 700;
-    }
-  `;
+    `
+  );
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);

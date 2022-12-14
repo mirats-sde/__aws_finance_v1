@@ -410,7 +410,7 @@ const InvoiceInternational = () => {
                             </td>
                             <td className={styles.center}>
                               ${""}
-                              {ord?.rate}
+                              {Math.floor(ord?.rate * 100) / 100}
                             </td>
                             <td className={styles.center}>{ord?.quantity}</td>
                             <td className={styles.center}>$ {ord?.amount}</td>

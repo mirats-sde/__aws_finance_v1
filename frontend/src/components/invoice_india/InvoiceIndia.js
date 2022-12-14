@@ -410,11 +410,12 @@ const InvoiceIndia = () => {
                           </td>
                           <td className={styles.center}>{ord?.gst}%</td>
                           <td className={styles.center}>
-                            ₹{Number(ord?.rate)?.toFixed(2)}
+                            ₹{/* {Number(ord?.rate)} */}
+                            {Math.floor(ord?.rate * 100) / 100}
                           </td>
                           <td className={styles.center}>{ord?.quantity}</td>
                           <td className={styles.center}>
-                            {console.log(ord)}₹{ord?.taxable_amount}
+                            {console.log(ord)}₹{ord?.taxable_amount?.toFixed(2)}
                           </td>
                           <td className={styles.center}>
                             ₹
